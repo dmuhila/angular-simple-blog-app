@@ -1,0 +1,33 @@
+<form [formGroup]="postForm" class="form-group" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title"> Title </label
+    ><input
+      type="text"
+      class="form-control"
+      name="title"
+      formControlName="title"
+    />
+  </div>
+  <div class="form-group">
+    <label for="category">Category </label>
+    <input
+      type="text"
+      class="form-control"
+      name="category"
+      formControlName="categories"
+    />
+  </div>
+  <div class="form-group">
+    <label for="content">Content </label>
+    <textarea
+      class="form-control"
+      type="text"
+      name="content"
+      formControlName="content"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button
+  ><button type="button" class="btn btn-danger" (click)="onCancel()">
+    Cancel
+  </button>
+</form>
