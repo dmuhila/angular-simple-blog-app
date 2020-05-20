@@ -1,5 +1,9 @@
 <ul class="list-group">
   <li class="list-group-item">
-    <a (click)="onClick()">{{ post.title }}</a>
+    <!-- <a (click)="onClick()">{{ post.title }}</a> -->
+    <a href="{{ this.post.id }}">{{ post.title }}</a>
+    <button class="btn btn-warning pull-right" (click)="onEdit()">
+      Edit Post
+    </button>
   </li>
 </ul>

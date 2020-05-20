@@ -13,7 +13,8 @@ export class ViewComponent implements OnInit {
   post: Post;
   constructor(
     private postService: PostService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -23,5 +24,9 @@ export class ViewComponent implements OnInit {
     this.postService.getPostById(this.id).subscribe((data) => {
       this.post = data;
     });
+  }
+  onDelete() {
+    this.router.navigate([""]);
+    this.postService.deletePost(this.id);
   }
 }

@@ -38,12 +38,13 @@ export class PostService {
     // this.posts.splice(id, 1);
     // this.postChanged.next(this.posts.slice());
     this.http
-      .delete("https://reduxblog.herokuapp.com/api/posts", {
-        params: { id: "" + id, key: "muhiladblog" },
+      .delete<Post>(`https://reduxblog.herokuapp.com/api/posts/${id}`, {
+        params: { key: "muhiladblog" },
       })
       .subscribe((res) => {
         console.log("delete", res);
-        //this.postChanged.next(res);
+        this.posts.splice(this.posts.indexOf(res), 1);
+        this.postChanged.next(this.posts);
       });
   }
 

@@ -6,6 +6,6 @@
 <ng-container *ngIf="isPost">
   <h3>Posts</h3>
   <div *ngFor="let post of posts; let i = index">
-    <app-postholder [post]="post"></app-postholder>
+    <app-postholder [i]="i"></app-postholder>
   </div>
 </ng-container>

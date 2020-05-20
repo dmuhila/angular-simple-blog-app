@@ -10,6 +10,7 @@ import { PostholderComponent } from "./postholder/postholder.component";
 import { PostComponent } from "./post/post.component";
 import { NewPostComponent } from "./new-post/new-post.component";
 import { ViewComponent } from './view/view.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ViewComponent } from './view/view.component';
     PostComponent,
     NewPostComponent,
     ViewComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

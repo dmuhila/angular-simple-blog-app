@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Post } from "../shared/post.model";
+import { PostService } from "../shared/post.service";
 
 @Component({
   selector: "app-postholder",
@@ -7,9 +8,10 @@ import { Post } from "../shared/post.model";
   styleUrls: ["./postholder.component.css"],
 })
 export class PostholderComponent implements OnInit {
-  @Input() post: Post[];
+  @Input() i: number;
+  post: Post[];
 
-  constructor() {}
+  constructor(private postService: PostService) {}
 
   ngOnInit() {
     console.log("in holder", this.post);
